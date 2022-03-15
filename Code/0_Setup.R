@@ -170,6 +170,6 @@ D_full$exclude<-relevel(D_full$exclude,ref="Included")
 #Write Data for analysis / shared data 
 D_simple<- 
   D%>%
-  select(condition,vac_pre,vac_post,ap_corona,age,gender,lr,activity,edu,vac_binary)
+  dplyr::select(condition,vac_pre,vac_post,ap_corona,age,gender,lr,activity,edu,vac_binary,wordcount,ap_corona_1,ap_corona_2,v_44)
 
 write_rds(D_simple, file="./data/data_shared.rds")
